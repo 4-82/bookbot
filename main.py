@@ -1,5 +1,4 @@
-def get_book_word_count(text: str) -> int:
-    return len(text.split())
+from stats import get_book_word_count
 
 def get_book_text(filepath: str) -> str:
      with open(filepath) as file:
