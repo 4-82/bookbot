@@ -2,7 +2,7 @@
   description = "";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
   outputs = { self, nixpkgs }: let
@@ -15,7 +15,7 @@
     in {
       default = pkgs.mkShell {
         packages = builtins.attrValues {inherit (pkgs) nil git gh bootdev-cli ripgrep python3;
-        inherit (pkgs.python313Packages) python-lsp-server;
+        inherit (pkgs.python314Packages) python-lsp-server;
       };
       };
      });          
