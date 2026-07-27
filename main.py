@@ -14,4 +14,6 @@ def print_report(text: str, count: int, sorted_char_count: list[tuple[str, int]]
         
     print(f"============ BOOKBOT ============\nAnalyzing book found at {text}...\n----------- Word Count ----------\nFound {count} total words\n--------- Character Count -------\n{string_result}============= END ===============")
 
+def main() -> str:
+    print_report("books/frankenstein.txt", get_book_word_count(get_book_text("books/frankenstein.txt")), chars_dict_to_sorted_list(get_char_count(get_book_text("books/frankenstein.txt"))))
 main()
